@@ -1,10 +1,1 @@
-{
-  "id": "quickloot",
-  "name": "Quickloot",
-  "category": "Feature-Patch",
-  "version": "1.0",
-  "author": "Kirides",
-  "description": "Ein Patch auf Basis von Ninja 2, welcher es in Gothic II: Die Nacht des Raben ermöglicht, mit der rechten Maustaste Gegenstände von Leichen, Bewusstlosen, offenen Truhen und dem Boden aufzuheben, ohne dabei eine Animation abzuspielen. Diebstähle werden mit diesem Patch ebenfalls bemerkt. Glaubt nicht, ihr könnt einfach in Häuser eindringen und ungestraft alles klauen.",
-  "downloadUrl": "https://www.worldofgothic.de/download.php?id=1671",
-  "fileSizeMB": 16
-}
+{"id":"quickloot","name":"Quickloot","category":"Feature-Patch","version":"1.0","author":"Kirides","description":"Ein Patch auf Basis von Ninja 2, welcher es in Gothic II: Die Nacht des Raben ermoeglicht, mit der rechten Maustaste Gegenstaende von Leichen, Bewusstlosen, offenen Truhen und dem Boden aufzuheben, ohne dabei eine Animation abzuspielen. Diebstaehle werden mit diesem Patch ebenfalls bemerkt. Glaubt nicht, ihr koennt einfach in Haeuser eindringen und ungestraft alles klauen.","downloadUrl":"https://www.worldofgothic.de/download.php?id=1671","fileSizeMB":16}

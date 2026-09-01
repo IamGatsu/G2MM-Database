@@ -1,0 +1,102 @@
+﻿Inhalt:
+Dieser Patch (Gothic 1 und Gothic 2 dNdR) führt automatisches Speichern ein.
+
+Gespeichert wird in festem, anpassbarem Intervall und nur wenn möglich. Während Kämpfen oder in Gefahren wird das Speichern ausgesetzt. Über die Gothic.ini werden ein oder mehrere Speicherslots reserviert, in die dann alterniert gespeichert wird. Damit stehen stets die letzten X Speicherungen zur Verfügungen, um versehentliche Fehlentscheidungen oder korrupte Spielstände vorzubeugen. Um stets den letzten Speicherstand zu finden, werden die Autosaves fortlaufend nummeriert, z.B. - Auto Save 42 -.
+
+⚠ Achtung: Die Standardeinstellungen belegen die unteren drei Speicherslots*. Diese sollten vor Nutzung des Patches gesichert oder auf andere Slots umgespeichert werden. Alternativ können vor erstem Gebrauch die reservierten Speicherslots in der Gothic.ini angepasst werden (siehe unten). Bitte auch vorher den Absatz "Bemerkungen" unten genau lesen.
+* Gothic 1: savegame13, savegame14, savegame15 — Gothic 2: savegame18, savegame19, savegame20
+
+
+Voraussetzungen:
+- Version 1.08k_mod(Gothic 1)
+- Reportversion 2.6.0.0(Gothic 2)
+- Ninja2 oder höher
+
+Installation:
+Einfach Autosave.vdf in den Ordner [Gothic]\Data\ kopieren. Zur Deinstallation jene Datei entfernen.
+
+INI Einstellungen:
+Speicherintervall, und die reservierten Speicherslots können in der Gothic.ini in der Sektion [AUTOSAVE] angepasst werden. Nach erstmaligem Starten wird diese erstellt.
+- Die Häufigkeit des automatischen Speicherns kann in Minuten als Ganzzahl über die Einstellung minutes angepasst werden.
+- Der Bereich der reservierten Speicherstände kann über slotMin und slotMax festgelegt werden. Um nur einen Speicherslot zu verwenden, beide Einstellungen auf den gleichen Wert setzen. Speicherslots sind nummeriert von 1 bis 15 (Gothic 1), bzw. 1 bis 20 (Gothic 2). Nummer 0 ist der Quicksave. Beispiel: Eine Angabe von 18 und 20 (bzw. 13 und 15 in Gothic 1), reserviert die unteren drei Speicherslots (18, 19 und 20, bzw. 13, 14 und 15).
+
+Bemerkungen:
+- Die Standard-Einstellung sehen so aus: Speichere alle 10 Minuten und alterniere über die unteren drei Slots.
+
+Gothic 1
+[AUTOSAVE]
+minutes=10
+slotMin=13
+slotMax=15
+
+Gothic 2
+[AUTOSAVE]
+minutes=10
+slotMin=18
+slotMax=20
+- Reserviert man alle Speicherslots und setzt das Speicherintervall gering genug, braucht man nie wieder manuell speichern.
+- Detailiertes Testen für verschiedene Einstellungen der Speicherslotreservierung war schwierig und ich empfehle nachdrücklich,den gesamten Spielstände-Ordner vor Gebrauch dieses Patches zu sichern!
+- Ist automatisches Speichern bereits in einer Mod enthalten, so unternimmt dieser Patch nichts. Falls das doch in einer Mod passiert, bitte melden, dann füge ich eine weitere Ausnahme zu.
+- Um Debuginformationen auf dem Bildschirm anzuzeigen, kann debug=1 in der Sektion [AUTOSAVE] in der Gothic.ini hinzugefügt werden. Neben der verbleibenden Zeit bis zum nächsten Speichern wird auch die Speicherverzögerung begründet.
+
+Changelog
+
+23.07.2020:
+- Erkennung von Kamerafahrten korrigiert
+- Debuginformationen hinzugefügt, aktivieren mit debug=1 in der Gothic.ini
+22.07.2020:
+- Unterdrücken von Speichern während Kamerafahrten
+- Verhindern von korrumpierten FrameFunctions
+22.07.2020: Erste Veröffentlichung
+
+zum Forenthread
+
+English translation:
+This patch (Gothic 1 and Gothic 2 NotR) introduces automatic game saving.
+
+Saving occurs in fixed, adjustable intervals and only when possible. Saving is suspended during fights or when in threat. One or multiple saving slots are reserved in the Gothic.ini, which are alternated for saving. This allows to maintain the last X game saves, to prevent against accidental bad decisions or game save corruptions. In order to always find the latest saved game, the auto saves are labeled incrementally, i.e. - Auto Save 42 -.
+
+⚠ Caution: The default settings reserve the bottom three save slots*. These should be backed up or re-saved to other slots before using this patch. Alternatively the reserved save slots can be adjusted in the Gothic.ini before first use (see below). Please carefully read the section "Notes" below.
+* Gothic 1: savegame13, savegame14, savegame15 — Gothic 2: savegame18, savegame19, savegame20
+
+
+Requirements:
+- Version 1.08k_mod(Gothic 1)
+- Reportversion 2.6.0.0(Gothic 2)
+- Ninja2 or higher
+
+Installation:
+Copy Autosave.vdf into the directory [Gothic]\Data\. To uninstall, remove the file again.
+
+INI Settings:
+Saving frequency and the reserved save slots can be adjusted in the Gothic.ini in the section [AUTOSAVE]. This section is created after first launch.
+- The interval of automatic saving can be set as integer with the setting minutes.
+- The range of reserved saving slots is adjustable with slotMin and slotMax. In order to only use one save slot, set both to the same value. Save slots are numbered from 1 to 15 (Gothic 1), and 1 to 20 (Gothic 2). The number 0 represents the quick save slot. Example: A setting of 18 and 20 (or 13 and 15 in Gothic 1), reserves the bottom three save slots (18, 19 and 20 / 13, 14 and 15).
+
+Notes:
+- The default settings look like this: Save every 10 minutes and alternate over the bottom three slots.
+
+Gothic 1
+[AUTOSAVE]
+minutes=10
+slotMin=13
+slotMax=15
+
+Gothic 2
+[AUTOSAVE]
+minutes=10
+slotMin=18
+slotMax=20
+- When reserving all save slots and setting the interval small enough, manual saving may become obsolete.
+- Extensive testing of different settings of the save slot reservation was difficult andbacking up the entire save game directory is highly recommended before usage of the patch!
+- If a mod already implements auto saves, this patch does not take any action. If it does anyway, please report it here and I will adjust the patch.
+- In order to show on-screen debug information, add debug=1 to the section [AUTOSAVE] in the Gothic.ini. Aside from showing the time until next saving, the reason for suspending the save is displayed.
+
+Changelog:
+23.07.2020:- Fix detection of camera cut scenes
+- Add on-screen debug information, activated with debug=1 in the Gothic.ini
+22.07.2020:- Suspend saving during camera cut scenes
+- Prevent corruption of FrameFunctions
+22.07.2020: Initial release
+
+Thread in our forum

@@ -1,0 +1,20 @@
+﻿Inhalt:
+Dir tut der Finger vom ewigen Laufen schon weh? Dann schafft "AutoRun" dir Abhilfe! Ab jetzt brauchst du nur noch kurz eine Taste drücken, die du im Steuerungsmenü einstellen kannst, damit der Held munter drauf los läuft! Kompatibel mit Gothic 1, Gothic 2 undDauerhaft Rennen(Rennen Taste muss gedrückt sein, evtl. wird dies später noch mit einem Update angepasst).
+
+Standard Tasten: U, Z
+
+
+Voraussetzungen:
+- Version 1.08k_mod(Gothic 1) beziehungsweiseReportversion 2.6.0.0(Gothic 2)
+- Ninja2.4.09 oder höher
+
+Installation:
+Einfach die Datei AutoRun.vdf aus dem ZIP Archiv extrahieren und in den Ordner[Gothic]\Data\ kopieren. Zur Deinstallation die Datei einfach aus dem Ordner [Gothic]\Data\ entfernen.
+
+
+Credits
+Kirides - Große Teile des "Held Läuft" Code
+N1kX - Übersetzung Russisch und Polnisch
+
+
+Release Thread im Forum
